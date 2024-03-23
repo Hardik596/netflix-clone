@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+
+
+        nav {
+            background-image: url(nav_back.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 84vh;
+            width: 99vw;
+        }
+
+        .black {
+            background-color: black;
+            filter: opacity(0.7);
+            height: 84vh;
+        }
+
+        .nav_title {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            z-index: 1;
+            height: 60px;
+            width: 80vw;
+            gap: 20px;
+
+        }
+
+        .title {
+            color: white;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid white;
+            border-radius: 6px;
+            height: 30px;
+            width: 130px;
+            text-align: center;
+            font-size: 19px;
+        }
+
+        .title_second {
+            text-decoration: none;
+            color: white;
+            background-color: red;
+            border-radius: 6px;
+            height: 28px;
+            width: 70px;
+            text-align: center;
+            font-size: 19px;
+        }
+
+        main {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            height: 70vh;
+            width: 99vw;
+
+        }
+
+        main div:first-child b {
+            font-size: 50px;
+            font-weight: 800;
+
+        }
+
+        main div:nth-child(2) {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+
+        main input {
+            padding: 25px;
+            border: 0.5px solid white;
+            color: rgb(225, 225, 225);
+            border-radius: 5px;
+            height: 4px;
+            width: 300px;
+            font-size: 15px;
+            font-weight: 700;
+            background: none;
+        }
+
+        main button {
+            padding: 1px;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+            height: 59px;
+            width: 180px;
+            font-weight: 600;
+            font-size: 23px;
+            text-align: center;
+        }
+
+        main div {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 20px;
+        }
+
+
+        .line {
+            width: 98.9vw;
+            height: 7px;
+            background-color: rgb(49, 46, 46);
+        }
+
+        .second_page {
+            background-color: black;
+            height: 80vh;
+            color: white;
+        }
+
+        .second_page div:first-child {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            gap: 20px;
+
+        }
+
+        .second_page div div:first-child {
+            display: flex;
+            flex-direction: column;
+            height: 20vh;
+
+
+        }
+
+        .second_page div div div:first-child {
+            font-weight: 900;
+            font-size: 60px;
+        }
+
+        img {
+            position: relative;
+            z-index: 2;
+        }
+
+        .img_vid {
+            position: relative;
+        }
+
+        .img_vid video {
+            position: absolute;
+            left: 80px;
+            top: 90px;
+        }
+
+        .third_page {
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        #third_main b {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .third_page div:first-child {
+            position: relative;
+        }
+
+        .third_box {
+            position: absolute;
+            border: 2px solid white;
+            background-color: black;
+            border-radius: 10px;
+            height: 100px;
+            width: 350px;
+            display: flex;
+            gap: 20px;
+            top: 350px;
+            z-index: 2;
+            left: 100px;
+        }
+
+        .third_box span {
+            font-size: 18px;
+            align-self: center;
+        }
+
+        .third_box span p {
+            color: blue;
+        }
+
+        .fourth_page {
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .fourth_page video {
+            position: absolute;
+            top: 30px;
+            left: 96px;
+        }
+
+        .fourth_page span:nth-child(2) {
+            position: relative;
+        }
+
+        #fourth_main b {
+            font-size: 50px;
+            font-weight: 800;
+
+        }
+
+        .fifth_page {
+            background-color: black;
+            font-size: 25px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            font-size: 25px;
+        }
+
+        .fifth_main b {
+            font-size: 50px;
+            font-weight: 800;
+        }
+
+        .sixth_page {
+            background-color: black;
+            height: 105vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:40px; 
+        }
+
+        .sixth_page div span {
+            align-self: center;
+            justify-self: center;
+            gap: 10px;
+        }
+
+        .sixth_page div div {
+            background-color: rgb(49, 46, 46);
+            width: 80vw;
+            height: 40px;
+            font-size: 25px;
+            font-weight: 400;
+            padding: 18px;
+
+        }
+
+        .sixth_page div {
+            display: grid;
+            grid-template-rows: 80px 80px 80px 80px 80px 80px;
+            text-align: left;
+            font-size: 40px;
+            font-weight: 900;
+            gap: 10px;
+        }
+
+        .sixth_page div:nth-child(2) {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sixth_page input {
+            padding: 25px;
+            border: 0.5px solid white;
+            color: rgb(225, 225, 225);
+            border-radius: 5px;
+            height: 4px;
+            width: 300px;
+            font-size: 15px;
+            font-weight: 700;
+            background: none;
+        }
+
+        .sixth_page button {
+            padding: 1px;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+            height: 59px;
+            width: 180px;
+            font-weight: 600;
+            font-size: 23px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="black">
+            <div class="nav_title">
+                <select name="lang" class="title">
+                    <option value="english">English</option>
+                    <option value="hindi">hindi</option>
+                    <option value="french">french</option>
+                    <option value="japnese">japnese</option>
+                </select>
+                <a href="/" class="title_second">sign in</a>
+            </div>
+            <main>
+                <div><b>Unlimited movies, TV shows and more</b><br>
+                    <br>Watch anywhere. Cancel anytime.<br>
+                    <br>Ready to watch? Enter your email to create or restart your membership
+                </div>
+                <div><input type="text" name="address" placeholder="Email address">
+                    <button>Get Started ></button>
+                </div>
+            </main>
+        </div>
+
+    </nav>
+    <div class="line"></div>
+    <article class="second_page">
+        <div>
+            <div>
+                <div>Enjoy on your TV</div>
+                <div>Watch on smart TVs, PlayStation, Xbox, Chromecast,<br>
+                    Apple TV, Blu-ray players and more.</div>
+            </div>
+            <div class="img_vid">
+                <img src="first_img.png" alt="invalid image" width="600px">
+                <video src="first_vid.m4v" width="460px" autoplay muted>
+                </video>
+            </div>
+
+
+        </div>
+    </article>
+    <div class="line"></div>
+    <article class="third_page">
+        <div><img src="second_img.jpg" alt="invalid image" width="580px" id="img_third">
+            <div class="third_box">
+                <img src="second_half.png" alt="invalid image" width="70px">
+                <span>
+                    Stranger things<br>
+                    <p>Downloading...</p>
+                </span>
+            </div>
+        </div>
+        <span id="third_main">
+            <b>Download your shows<br> to watch offline</b><br><br>
+            Save your favourites easily and always have something <br>to watch.
+        </span>
+    </article>
+    <div class="line"></div>
+    <article class="fourth_page">
+        <span id="fourth_main">
+            <b>Watch everywhere</b><br><br>
+            Stream unlimited movies and TV shows on your<br>
+            phone, tablet, laptop, and TV.
+        </span>
+        <span><img src="third_img.png" alt="invalid" width="600px">
+            <video src="third_vid.m4v" width="400px" muted></video>
+        </span>
+
+    </article>
+    <div class="line"></div>
+    <article class="fifth_page">
+        <img src="fifth_img.png" alt="invalid" width="600px">
+        <span class="fifth_main">
+            <b>Create profiles for kids</b><br>
+            Send children on adventures with their favourite<br>
+            characters in a space made just for them—free with <br>
+            your membership.
+        </span>
+    </article>
+    <div class="line"></div>
+    <article class="sixth_page">
+        <div>
+            <span>Frequently Asked Questions</span>
+            <div>What is Netflix ?</div>
+            <div>How much does Netflix cost ?</div>
+            <div>Where can i watch ?</div>
+            <div>How do i cancel?</div>
+            <div>What can i watch on netflix ?</div>
+            <div>Is netflix good for kids ?</div>
+        </div>
+        <div>
+            <input type="text" name="address" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </article>
+    <div class="line"></div>
+    <footer>
+        <div>Questions? Call 000-800-919-1694</div>
+        
+    </footer>
+
+</html>
